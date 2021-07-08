@@ -18,6 +18,6 @@ public class UtestForm {
             .located(By.id("birthYear"));
     public static final Target LANGUAGE = Target.the("write and select our language")
             .located(By.xpath("//div[@id='languages']//div[1]//input"));
-    public static final Target NEXT = Target.the("button that shows us the next step")
+    public static final Target NEXT1 = Target.the("button that shows us the next step")
             .located(By.xpath("//div[@class='form-group col-xs-12 text-right']//a"));
 }

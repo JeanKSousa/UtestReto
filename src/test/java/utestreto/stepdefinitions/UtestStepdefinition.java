@@ -6,12 +6,12 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import utestreto.model.UtestData;
+import utestreto.task.Form1;
 import utestreto.task.OpenUp;
 
 import java.util.List;
 
-import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
-import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
+import static net.serenitybdd.screenplay.actors.OnStage.*;
 
 public class UtestStepdefinition {
     @Before
@@ -26,7 +26,7 @@ public class UtestStepdefinition {
 
     @When("^I type my personal information on the form$")
     public void iTypeMyPersonalInformationOnTheForm(List<UtestData> utestData) throws Exception {
-
+        theActorInTheSpotlight().attemptsTo(Form1.formStep(utestData));
     }
 
     @Then("^Successfully registered$")
