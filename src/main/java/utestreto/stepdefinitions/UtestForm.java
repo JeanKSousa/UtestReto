@@ -20,4 +20,15 @@ public class UtestForm {
             .located(By.xpath("//div[@id='languages']//div[1]//input"));
     public static final Target NEXT1 = Target.the("button that shows us the next step")
             .located(By.xpath("//div[@class='form-group col-xs-12 text-right']//a"));
+
+    public static final Target CITY = Target.the("select the city")
+            .located(By.id("city"));
+    public static final Target POSTAL = Target.the("select the postal code")
+            .located(By.id("zip"));
+    public static final Target COUNTRY = Target.the("select the country")
+            .located(By.xpath("//div[@class='ui-select']//div[1]//div[1]"));
+    public static final Target INPUT_COUNTRY = Target.the("type the country")
+            .located(By.xpath("//div[@class='ui-select']//div[1]//div[1]//input[1]"));
+    public static final Target NEXT2 = Target.the("button that shows us the next step")
+            .located(By.xpath("//div[@class='pull-right next-step']//a"));
 }

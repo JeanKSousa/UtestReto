@@ -6,6 +6,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.actions.selectactions.SelectByVisibleTextFromTarget;
 import org.openqa.selenium.Keys;
 import utestreto.model.UtestData;
@@ -26,6 +27,7 @@ public class Form1 implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
+                Scroll.to(UtestForm.IMPUT_NAME).andAlignToTop(),
                 Enter.theValue(utestData.get(0).getFirstName()).into(UtestForm.IMPUT_NAME),
                 Enter.theValue(utestData.get(0).getLastName()).into(UtestForm.IMPUT_LASTNAME),
                 Enter.theValue(utestData.get(0).getEmail()).into(UtestForm.IMPUT_EMAIL),
