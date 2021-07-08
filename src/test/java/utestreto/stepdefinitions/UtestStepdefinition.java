@@ -6,9 +6,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import utestreto.model.UtestData;
-import utestreto.task.Form1;
-import utestreto.task.Form2;
-import utestreto.task.OpenUp;
+import utestreto.task.*;
 
 import java.util.List;
 
@@ -27,7 +25,11 @@ public class UtestStepdefinition {
 
     @When("^I type my personal information on the form$")
     public void iTypeMyPersonalInformationOnTheForm(List<UtestData> utestData) throws Exception {
-        theActorInTheSpotlight().attemptsTo(Form1.formStep(utestData), Form2.formStep(utestData)
+        theActorInTheSpotlight().attemptsTo(
+                Form1.formStep(utestData),
+                Form2.formStep(utestData),
+                Form3.formStep(utestData),
+                Form4.formStep(utestData)
         );
     }
 
